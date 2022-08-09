@@ -1,5 +1,3 @@
-# PHP
-
 ## Constructor
 
 El constructor permite incializar propiedades de los objetos una vez creados.

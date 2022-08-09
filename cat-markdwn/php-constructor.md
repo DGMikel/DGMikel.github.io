@@ -26,6 +26,7 @@ echo $carro->data_out();
 ```
 
 tendrá por salida: 
-
+```cmd
 Tipo de vehiculo: Bocho
 Numero de llantas 4
+```

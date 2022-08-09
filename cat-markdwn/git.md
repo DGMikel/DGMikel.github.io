@@ -1,9 +1,14 @@
 ## CLASE 
 
-** Propiamente una clase se define:**
-	1. Palabra inicial class 
-	2. Dos llaves que encuierran el cuerpo de la clase 
-	3. Entre las llaves Definiciones y/o propiedades
+**Propiamente una clase se define con:
+
+	1. Icinicia con la palabra class.
+	2. Seguido por el Nombre de la Clase.
+	3. Dos llaves encierran el contenido.
+		1. Definiciones de clase
+		2. Variables
+		3. Metodos
+
 
 
 

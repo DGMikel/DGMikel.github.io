@@ -18,12 +18,10 @@ class Persona{
   public $nombre;
   public $puesto;
 
-  /* ajusta el nombre que ingresa
-  en la función $nom*/
+  /* ajusta el nombre que ingresa en la función $nom*/
   function set_nombre($nom){
     
-    /* el 'this' es para hacer referencia a
-       public $nombre de la clase */
+    /* el 'this' es para hacer referencia a public $nombre de la clase */
     $this->$nombre = $nom;
   }
   

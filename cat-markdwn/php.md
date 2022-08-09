@@ -12,29 +12,26 @@ Propiamente una clase se define con:
 		2. Variables
 		3. Metodos
 
-class name_funtion{
+### Ejemplo
 
-	// variables de clase
+class Persona{
 
-	private var1;
-	private var2;
+  public $nombre;
+  public $puesto;
 
-
-	// constructor de la clase 
-	function __constr(){
-
-		public var_constr1;
-		public var_constr2;
-
-	}
-
-	// 
-	function metodo_1() {
-
-		
-
-	}
-	
-
+  /* ajusta el nombre que ingresa
+  en la función $nom*/
+  function set_nombre($nom){
+    
+    /* el 'this' es para hacer referencia a
+       public $nombre de la clase */
+    $this->$nombre = $nom;
+  }
+  
+  function get_nombre(){
+    $this->puesto = "Programador";
+    return $this->$nombre;
+  }
+ 
 }
 

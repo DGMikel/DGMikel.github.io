@@ -1,0 +1,7 @@
+CLASE 
+
+class nombre_calse{
+
+Cuerpo de la clase: Definiciones y propiedades
+
+}

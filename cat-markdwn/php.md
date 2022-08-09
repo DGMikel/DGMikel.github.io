@@ -11,7 +11,7 @@
 		1. Definiciones de clase
 		2. Variables
 		3. Metodos
-```python
+```php
 
 class Persona{
 
@@ -33,5 +33,13 @@ class Persona{
   }
  
 }
+
+/*Aplicación d la clase al codigo */
+$persona = new Persona(); /* inicia objeto*/
+$persona->set_nombre("Mike"); /* ajustar variables de clase */
+
+/* hacer uso de los atributos de la clase */
+echo "El nombre del personal es: ".$persona->get_nombre(). "<br>";
+echo "Y tiene el puesto de: ".$persona->puesto;
 
 ```

@@ -1,13 +1,40 @@
-## CLASE 
+# PHP 
 
-** Propiamente una clase se define:**
-	1. Palabra inicial class 
-	2. Dos llaves que encuierran el cuerpo de la clase 
-	3. Entre las llaves Definiciones y/o propiedades
+### Clase 
 
 
-class nombre_calse{
+Propiamente una clase se define con:
 
-	Definiciones y propiedades
+	1. Icinicia con la palabra class.
+	2. Seguido por el Nombre de la Clase.
+	3. Dos llaves encierran el contenido.
+		1. Definiciones de clase
+		2. Variables
+		3. Metodos
+
+class name_funtion{
+
+	// variables de clase
+
+	private var1;
+	private var2;
+
+
+	// constructor de la clase 
+	function __constr(){
+
+		public var_constr1;
+		public var_constr2;
+
+	}
+
+	// 
+	function metodo_1() {
+
+		
+
+	}
+	
 
 }
+

@@ -20,8 +20,6 @@ class Articles{
 
   // Solo esta clase que lo contiene puede modificarla
   private $no_pags;
-
-  
-  
+    
 }
 ```

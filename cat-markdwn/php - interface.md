@@ -4,7 +4,7 @@ Permiten especificar que metodos se deben implementar en una clase
 
   1. Las interfaces no tienen argumentos, solo los metodos
   2. Todos los metodos son publicos
-  3. Todos los metodos son abstractos (No tienen fucnionalidad esta se establece enlaclase que implementa)
+  3. Todos los metodos son abstractos (No tienen fucnionalidad esta se establece en la clase que implementa)
   4. Pueden ser implementadas y heredadas. 
 
 ```php

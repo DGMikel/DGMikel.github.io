@@ -1,6 +1,7 @@
-# Metodos estaticos (statics)
+# Metodos estáticos (statics)
 
-Los metodos estaticos se pueden invocar sin instanciar la clase que los contiene.
+Los metodos estáticos se pueden invocar sin instanciar la clase que los contiene.
+así se evitará en medida de lo necesario la instanciación de toda una clase
 
 ```php
 <?php

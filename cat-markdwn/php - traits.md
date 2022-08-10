@@ -1,84 +1,55 @@
 # Traits
 
-Trait permite el el uso de sus metodos en varias clases al mismo tiempo, parecido al la clase abstracta los traits se idefrencian por varios movitivos:
+Los traits a diferencia de las interfaces estos permiten implementar en lasclases que los usan metodos normales y abstractos
+losque significa que estosmetodos siguen las reglas que a cada uno atañe.
 
-  1. Sedefinen con lasintaxis : trait NombreTrairt{ metodos - todos los metodos deben ser publicos - }
-  2. Todas las clases que hagan uso de estos deben incorporar todos los metodos del trait
-  3. No se permite que tengan más recursos que los metodos que estos contienen.
+  1. Los metodos abstractos - no tendran código en su interior y seran forzosamente usados por las clases que usan el trait -
+  2. Los metodos normales - deberán llevar un cuerpo de funcionamiento -
+  3. La clase que usa el trait podrá heredar todo su funcionameinto del trait
 
 ```php
 <?php 
-interface Sound{
-  public function sound($sonido);
-  public function efect($efecto);
+trait MultiFuncion{
+
+  // metodo normal
+  public function libre($funcion){
+    return "El numnero de función es: ".$funcion;
+  }
+  
+  // metodo abstracto
+  abstract function abstracto($abs);
 }
-//-------  Clase que implementa interface Sound -----------------
-class Guitar implements Sound{
-  public $typeSound;
-  public $typeEfect;
 
-  public function sound($sonido){
-    $this->typeSound = $sonido;
-    return "Su sonido es de: ".$this->typeSound;
-  }
+class TestCpu{
+  use MultiFuncion; // invocación del trait
 
-  public function efect($efecto){
-    $this->typeEfect = $efecto;
-    return "Su efecto es de: ".$this->typeEfect;
+  function start(){
+    return "<span style='color:red'>ON</span>";
   }
   
-}
-//-----------------------------------------------------------------
-
-//-------  Clase que implementa interface Sound -------------------
-// Esta clase usa más funciones que las que implemnta la interface
-class Violin implements Sound{
-  public $typeSound;
-  public $typeEfect;
-  public $color;
-  public $madera;
-  
-  function __construct($color, $madera){
-    $this->color = $color;
-    $this->madera = $madera;
-  }
-
-  public function mixData(){
-    echo "El violin tiene el color: $this->color 
-          y es de madera: $this->madera";
-  }
-  
-  public function sound($sonido){
-    $this->typeSound = $sonido;
-    return "Su sonido es de: ".$this->typeSound;
-  }
-
-  public function efect($efecto){
-    $this->typeEfect = $efecto;
-    return "Su efecto es de: ".$this->typeEfect;
+  // metodo abstracto forzado a aparecer gracias al trait
+  function abstracto($abs){
+    return "El absoluto de $abs es: ". abs($abs);
   }
   
 }
-//--------------------------------------------------------------------------------------
 
-$guitarra = new Guitar();
-$violin = new Violin("Cafe","Caoba");
+$cpu1 = new TestCpu();
+echo $cpu1->start();
+echo "<br>";
 
-echo $guitarra->sound("Cuerdas");
+// aquí se invoca una función abstracta
+// desde la clase - forzado a aparecer por el uso del trait
+echo $cpu1->abstracto(-125);
 echo "<br>";
-echo $guitarra->efect("Distorcionador");
-echo "<br>";
-echo $violin->sound("Cuerdas - con tilde");
-echo "<br>";
-echo $violin->efect("echo - delay");
-echo "<br>";
-echo $violin->mixData();
+
+// Aquí se invoca una función del Trait
+// que no esta declarado en la clase
+echo $cpu1->libre(2);
 ```
 Teniendo como resultado:
-```console
-Su sonido es de: Cuerdas
-Su efecto es de: Distorcionador
-Su sonido es de: Cuerdas - con tilde
-Su efecto es de: echo - delay
-El violin tiene el color: Cafe y es de madera: Caoba
+```html
+ON
+El absoluto de -125 es 125
+El numnero de función es: 2
 ```

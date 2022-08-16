@@ -2,41 +2,30 @@
 
 
 ```php
-
 class Conexion{
-  public   $instance;
-  private  $user = "root";
-  private  $passw = "";
-  private  $strConex = "mysql:host:loscalhost; dbname=mvc";
-  private  $conn;
   
-  // Inicializa la clase Conxion
+          public $db;
+  private static $instance;
+  private static $user = "root";
+  private static $dns = "mysql:host=localhost; dbname=mvc";
+  private static $password = "";
+  
   public function __construct(){
-  
-    $this->conn = new PDO($this->strConx, $this->user, $this->passw);
-  
+    $this->db = new PDO(self::$dns, self::$user, self::$password);
   }
   
-  // evita que copien la clase
-  public function __clone(){  }
-
-
+  public function __clone(){}
+  
   public function getInstance(){
   
-    if(!isset(self::instance)){
-        
-        $con = __CLASS__;
-        
-        self::instance = new $con;
-    
+    if(!isset(self::$instance)){
+      $object = __CLASS__;
+      self::$instance = new $object;
     }
-    return $instance
+      return self::$instance;
   
   }
 
-
-
 }
-
 
 ```

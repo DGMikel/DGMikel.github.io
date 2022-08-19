@@ -5,6 +5,12 @@ AJAX significa Asyncronous JavaScript XML
 se utilliza para hacer paginas dinámicas.
 es asíncrono y se utiliza para refrescar datos en ciertas partes de la pagína sin tener que refrescar todo el Documento HTML
 
+NOTA: readyState tiene 4 estados:
+  0. Request no autorizado == No se ha hecho el OPEN
+  1. Server conection established == se ha hecho el OPEN
+  2. Request recived == se ha hecho el SEND
+  3. Processing request == llego parte de los datos 
+  4. Request terminada == Respuesta está lista.
 
 ```javascript
 

@@ -8,12 +8,25 @@ es asíncrono y se utiliza para refrescar datos en ciertas partes de la pagína 
 
 ```javascript
 
-function java_ajax(){
+function javascript_ajax(){
 
 var xmlhttp = new XMLHttpRequest();
 
-xmlhttp.onxml
+xmlhttp.onreadystatechange = function(){
+  
+  if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+      
+      /*acciones aincronas a ejecutar*/
+      
+      var respuesta = xmlhttp.responseText;
+      console.log(respuesta);
+    
+  }
 
+}// end onready..
+
+xmlhttp.open("GET", "https://api.coindesk.com/v1/bpi/currentprice.json",true);
+xmlhttp.send();
 
 }
 

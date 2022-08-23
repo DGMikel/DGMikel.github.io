@@ -31,5 +31,9 @@ echo $resultado;
 $resultado = $a % $b; // resultado es igual a 0
 echo $resultado;
 
+//Operador NEGACIÓN
+$resultado = -$a ; // resultado es igual a -10
+echo $resultado;
+
 ```
 

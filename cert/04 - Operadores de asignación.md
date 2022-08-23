@@ -25,6 +25,7 @@ $a = 10;
  # OPERADOR DE AIGNACIÓN POR REFERENCIA
  
  Este operador asigna el valor de la variable al que se le antepone con cualquier cambio que esto conlleve.
+ ( siempre esta observando dicha variable )
  
  ```php
  
@@ -44,3 +45,5 @@ $a = 10;
  */
  
  ```
+ 
+ 

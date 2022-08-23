@@ -87,7 +87,7 @@ echo "0$nuevo_derecha - &nbsp;00001010 - >> (derecha 2)";
 
 /* SADLIDA
             DEC - Binario -   Espacios a recorrer
-             40 -    101000      2
+             40 -  00101000      2
             160 -  10100000 - << (izquierda 2)
             010 -  00001010 - >> (derecha 2)
 */

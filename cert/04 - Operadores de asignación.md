@@ -28,7 +28,6 @@ $a = 10;
  ( siempre esta observando dicha variable )
  
  ```php
- 
  $a = 10;
  $b = &$a;
  

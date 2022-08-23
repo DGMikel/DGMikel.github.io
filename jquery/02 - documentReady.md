@@ -5,7 +5,7 @@ $(document).ready()
 
 ```javascript
 
-$(document).ready({
+$(document).ready(function(){
 
         /* Aqui el código que se va a ejecutar*/
         alert('DOM Lsito!');

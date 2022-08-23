@@ -11,4 +11,4 @@ $(document).ready(function(){
         alert('DOM Lsito!');
 });
 ````
-
+Este método espera hasta que el **DOM** este cargado en el documento para poder modificar sus elementos

@@ -1,4 +1,4 @@
-# Document Rady
+# Document Ready
 
 Se usa para iniciar la manipulación del DOM
 $(document).ready() 

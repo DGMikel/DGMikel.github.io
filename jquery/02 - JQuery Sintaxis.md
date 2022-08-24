@@ -9,11 +9,11 @@ donde:
   ```javascript
   
   /*SINTAXIS*/
-  $(modificador).action();
+  $(selector).action();
   
   $ => da inicío a JQuery
   
-  (modificador) => 
+  (selector) => 
   ('p')       => se va a modificar a **TODOS** los elementos que tengan la etiqueta <p>
   ('.class')  => se van a modificar los elementos html que tengan asignadas la clase css referenciada ".class"
   ('#id')     => se va a modificar el elemento de html que tenga el id referenciado '#id'  

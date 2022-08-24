@@ -1,5 +1,6 @@
 # SELECTORES
 
+Los selectores de JQuery son parecidos a los usados en CSS pero llevan su propia sntaxis.
 
 |Selector	              |Example	                   |Selects|
 |:----------------------|:---------------------------|:------|

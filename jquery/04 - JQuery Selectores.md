@@ -9,7 +9,7 @@ Los selectores de JQuery son parecidos a los usados en CSS pero llevan su propia
 |.class	                |$(".intro")	               | All elements with class="intro"|
 |.class,.class          |$(".intro,.demo")	         | All elements with the class "intro" or "demo"|
 |element	              |$("p") 	                   | All <p> elements|
-|el1,el2,el3	          |$("h1,div,p")	             | All <h1>, <div> and <p> elements|
+|el1,el2,el3	          |$("h1,div,p")	             | All <h 1>, <div> and <p> elements|
 |:first	                |$("p:first")	               | The first <p> element|
 |:last	                |$("p:last")	               | The last <p> element|
 |:even                  |$("tr:even")	               | All even <tr> elements|

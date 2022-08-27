@@ -1,7 +1,7 @@
 # Traits
 
-Los traits a diferencia de las interfaces estos permiten implementar en lasclases que los usan metodos normales y abstractos
-losque significa que estosmetodos siguen las reglas que a cada uno atañe.
+Los traits a diferencia de las interfaces estos permiten implementar en las clases que los usan metodos normales y abstractos
+los que significa que estos metodos siguen las reglas que a cada uno atañe.
 
   1. Los metodos abstractos - no tendran código en su interior y seran forzosamente usados por las clases que usan el trait -
   2. Los metodos normales - deberán llevar un cuerpo de funcionamiento -

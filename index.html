@@ -1,14 +1,135 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGMike-blog</title>
-</head>
+<html>
+<title>MDG SISTEMA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<!-- 
+  light-blue
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+<!-- -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <body>
-    
-	<h1>BLOG MDG</h1>
+
+  <div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
+
+    <div class="w3-bar w3-black w3-center">
+      <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav01')">
+        <i class="fa fa-bars w3-xlarge"></i></a>
+
+      <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav03')">
+        <i class="fa fa-cube w3-xlarge"></i></a>
+      <!-- <i class="fa-duotone fa-cube"></i> -->
+      <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav02')">
+        <i class="fa fa-camera w3-xlarge"></i></a>
+       <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" style="width:33.33%" href="javascript:void(0)" onclick="w3_close()">
+        <i class="fa fa-close w3-xlarge"></i></a>
+      <!-- 
+      <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" href="javascript:void(0)"
+        onclick="w3_close()"><i class="fa-solid fa-xmark w3-xlarge"></i></a>
+      fa fa-camera -->
+    </div>
+
+    <div id="nav01" class="w3-bar-block">
+
+      <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#">LOGO IMGEN</a>
+      <a class="w3-bar-item w3-button" href="#">Item0-Lteral</a>
+      <a class="w3-bar-item w3-button" href="#">Item1-Lteral</a>
+      <a class="w3-bar-item w3-button" href="#">Item2-Lateral</a>
+      <a class="w3-bar-item w3-button" href="#">Item3-Lateral</a>
+      <a class="w3-bar-item w3-button" href="#">Item4-Lateral</a>
+    </div>
+
+    <div id="nav02">
+      <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="8517-universo.jpg"
+          style="width:100%;"></a>
+      <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="tarjetaElec.jpg"
+          style="width:100%;"></a>
+      <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="blender3.jpg"
+          style="width:100%;"></a>
+    </div>
+
+    <div id="nav03">
+      <div class="w3-container w3-border-bottom">
+        <h1 class="w3-text-theme">ROBOTS</h1>
+      </div>
+      <ul class="w3-ul w3-large">
+        <li class="w3-padding-16">ROBOT0</li>
+        <li class="w3-padding-16">ROBOT1</li>
+        <li class="w3-padding-16">ROBOT2</li>
+        <li class="w3-padding-16">ROBOT3</li>
+        <li class="w3-padding-16">ROBOT4</li>
+        <li class="w3-padding-16">ROBOT5</li>
+        <li class="w3-padding-16">ROBOT6</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <div class="w3-main" style="margin-left:300px;">
+
+    <div class="w3-top w3-theme w3-large w3-hide-large">
+      <i class="fa fa-bars w3-button w3-black w3-xlarge" onclick="w3_open()"></i>
+    </div>
+
+    <header class="w3-container w3-theme-d5 w3-padding-64 w3-center">
+      <h1 class="w3-xxxlarge w3-padding-16">TchisSchool</h1>
+    </header>
+
+    <div class="w3-container w3-padding-large w3-section w3-light-gray">
+      <h1 class="w3-jumbo">Curso 1</h1>
+      <p class="w3-xlarge">Curso Eléctronica</p>
+
+    </div>
+
+    <div class="w3-container w3-padding-large w3-section w3-light-grey">
+      <h1 class="w3-jumbo">Curso 2</h1>
+      <p class="w3-xlarge">Robotica</p>
+    </div>
+
+    <footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity margin-bottom: auto;">
+      <p>
+      <nav>
+        <a href="/forum/default.asp" target="_blank">face</a>
+        <a href="/forum/default.asp" target="_blank">twitter</a>
+        <a href="/forum/default.asp" target="_blank">instagram</a>
+        <a href="/about/default.asp" target="_top">ABOUT US</a>
+      </nav>
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    openNav("nav01");
+    function openNav(id) {
+      document.getElementById("nav01").style.display = "none";
+      document.getElementById("nav02").style.display = "none";
+      document.getElementById("nav03").style.display = "none";
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+    w3CodeColor();
+  </script>
 
 </body>
+
 </html>

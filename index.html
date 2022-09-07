@@ -1,135 +1,233 @@
-<!DOCTYPE html>
-<html>
-<title>MDG SISTEMA</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<!-- 
-  light-blue
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
-<!-- -->
+<!doctype html>
+<html lang="es">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Miguel A. Domínguez</title>
+  <!--
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/"> -->
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="dashboard.css" rel="stylesheet">
+</head>
 
 <body>
+  <!--  -->
+  <header class="navbar navbar-dark  bg-dark  sticky-top  flex-md-nowrap p-0 shadow colorNegro">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">
+      <i class="bi bi-house"></i>Home</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="w3-sidebar w3-collapse w3-white w3-animate-left w3-large" style="z-index:3;width:300px;" id="mySidebar">
 
-    <div class="w3-bar w3-black w3-center">
-      <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav01')">
-        <i class="fa fa-bars w3-xlarge"></i></a>
+  </header>
 
-      <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav03')">
-        <i class="fa fa-cube w3-xlarge"></i></a>
-      <!-- <i class="fa-duotone fa-cube"></i> -->
-      <a class="w3-bar-item w3-button" style="width:33.33%" href="javascript:void(0)" onclick="openNav('nav02')">
-        <i class="fa fa-camera w3-xlarge"></i></a>
-       <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" style="width:33.33%" href="javascript:void(0)" onclick="w3_close()">
-        <i class="fa fa-close w3-xlarge"></i></a>
-      <!-- 
-      <a class="w3-button w3-hover-teal w3-hide-large w3-large w3-right" href="javascript:void(0)"
-        onclick="w3_close()"><i class="fa-solid fa-xmark w3-xlarge"></i></a>
-      fa fa-camera -->
-    </div>
-
-    <div id="nav01" class="w3-bar-block">
-
-      <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#">LOGO IMGEN</a>
-      <a class="w3-bar-item w3-button" href="#">Item0-Lteral</a>
-      <a class="w3-bar-item w3-button" href="#">Item1-Lteral</a>
-      <a class="w3-bar-item w3-button" href="#">Item2-Lateral</a>
-      <a class="w3-bar-item w3-button" href="#">Item3-Lateral</a>
-      <a class="w3-bar-item w3-button" href="#">Item4-Lateral</a>
-    </div>
-
-    <div id="nav02">
-      <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_templates_black.htm"><img src="8517-universo.jpg"
-          style="width:100%;"></a>
-      <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_album.htm"><img src="tarjetaElec.jpg"
-          style="width:100%;"></a>
-      <a class="w3-bar-item w3-button" target="_blank" href="tryw3css_examples_blog.htm"><img src="blender3.jpg"
-          style="width:100%;"></a>
-    </div>
-
-    <div id="nav03">
-      <div class="w3-container w3-border-bottom">
-        <h1 class="w3-text-theme">ROBOTS</h1>
-      </div>
-      <ul class="w3-ul w3-large">
-        <li class="w3-padding-16">ROBOT0</li>
-        <li class="w3-padding-16">ROBOT1</li>
-        <li class="w3-padding-16">ROBOT2</li>
-        <li class="w3-padding-16">ROBOT3</li>
-        <li class="w3-padding-16">ROBOT4</li>
-        <li class="w3-padding-16">ROBOT5</li>
-        <li class="w3-padding-16">ROBOT6</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-
-  <div class="w3-main" style="margin-left:300px;">
-
-    <div class="w3-top w3-theme w3-large w3-hide-large">
-      <i class="fa fa-bars w3-button w3-black w3-xlarge" onclick="w3_open()"></i>
-    </div>
-
-    <header class="w3-container w3-theme-d5 w3-padding-64 w3-center">
-      <h1 class="w3-xxxlarge w3-padding-16">Miguel A. Domínguez G.</h1>
-    </header>
-
-    <div class="w3-container w3-padding-large w3-section w3-light-gray">
-      <h1 class="w3-jumbo">Curso 1</h1>
-      <p class="w3-xlarge">Curso Eléctronica</p>
-
-    </div>
-
-    <div class="w3-container w3-padding-large w3-section w3-light-grey">
-      <h1 class="w3-jumbo">Curso 2</h1>
-      <p class="w3-xlarge">Robotica</p>
-    </div>
-
-    <footer class="w3-container w3-padding-large w3-light-grey w3-justify w3-opacity margin-bottom: auto;">
-      <p>
-      <nav>
-        <a href="/forum/default.asp" target="_blank">face</a>
-        <a href="/forum/default.asp" target="_blank">twitter</a>
-        <a href="/forum/default.asp" target="_blank">instagram</a>
-        <a class="w3-left" href="/about/default.asp" target="_top">ABOUT US</a>
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span data-feather="home"></span>
+                Item 1
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                Item 2
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="shopping-cart"></span>
+                Item 3
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="users"></span>
+                Item 4
+              </a>
+            </li>
+          </ul>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="link-secondary" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Current month
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Year-end sale
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      </p>
-    </footer>
 
-  </div>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h3 class="h3">OCUPACIÓN</h3>
+        </div>
+        <!-- Body html -->
 
-  <script>
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-    }
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-1">
+            <div class="h-60 p-2 text-bg-dark bg-dark rounded-3">
+              <h4 style="color:white;">DESARROLLADOR WEB</h4>
+              <p style="color:white;">NIVEL JR LAPM JAVA BACKEND</p>
+              <button type="button" class="btn btn-success">DETALLES</button>
+            </div>
+          </div>
 
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-    }
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-1">
+            <div class="h-60 p-2 text-bg-dark bg-dark rounded-3">
+              <!-- TABLA -->
 
-    openNav("nav01");
-    function openNav(id) {
-      document.getElementById("nav01").style.display = "none";
-      document.getElementById("nav02").style.display = "none";
-      document.getElementById("nav03").style.display = "none";
-      document.getElementById(id).style.display = "block";
-    }
-  </script>
+              <table class="table table-borderless" style="color:white;">
+                <tbody>
+                  <tr>
+                    <td style="width:10%">PHP</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                             role="progressbar" 
+                             style="width: 25%" 
+                             aria-valuenow="25"
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                                    25%
+                        </div>
+                      </div>
+                    </td>
+                    <td style="width:10%">JAVA</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                          role="progressbar" 
+                          style="width: 25%" 
+                          aria-valuenow="25"
+                          aria-valuemin="0" 
+                          aria-valuemax="100">
+                          25%
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
 
-  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+                  <tr>
+                    <td style="width:10%">SQL</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                             role="progressbar" 
+                             style="width: 25%" 
+                             aria-valuenow="25"
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                                    25%
+                        </div>
+                      </div>
+                    </td>
+                    <td style="width:10%">LINUX</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                          role="progressbar" 
+                          style="width: 25%" 
+                          aria-valuenow="25"
+                          aria-valuemin="0" 
+                          aria-valuemax="100">
+                          25%
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
 
-  <script>
-    w3CodeColor();
-  </script>
+                </tbody>
+              </table>
 
+
+              <!-- END TABLA -->
+
+
+
+            </div>
+          </div>
+
+          <!-- Fin html -->
+      </main> <!-- fin main -->
+    </div> <!-- row -->
+  </div> <!--  contenedor -->
+
+
+  <script src="./dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+    integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+    crossorigin="anonymous"></script>
+  <script src="dashboard.js"></script>
 </body>
 
 </html>
+
+<!-- 
+
+    
+    </div><!-- row -->

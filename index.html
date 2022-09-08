@@ -14,7 +14,7 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./dist/bootstrap.min.css" rel="stylesheet">
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
@@ -32,6 +32,11 @@
         font-size: 3.5rem;
       }
     }
+
+    .colorWeb{
+      color:white;
+    }
+    
   </style>
 
 
@@ -58,60 +63,83 @@
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                <span data-feather="home"></span>
-                Item 1
-              </a>
+              <h5>Especifico</h5>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file"></span>
-                Item 2
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Item 3
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="users"></span>
-                Item 4
-              </a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  DESARROLLO
+                </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item">
+                          <a class="nav-link" href="/php.html">
+                            <span data-feather="file"></span>
+                            PHP
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <span data-feather="shopping-cart"></span>
+                              JAVA EN ANDROID
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                          <span data-feather="users"></span>
+                            SQL
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <span data-feather="users"></span>
+                              LINUX
+                          </a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                              <span data-feather="users"></span>
+                                JAVASCRIPT
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                              <span data-feather="users"></span>
+                                JQUERY
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <span data-feather="users"></span>
+                              LARAVEL / CODEIGNITER
+                          </a>
+                        </li>
+                    </ul>
             </li>
           </ul>
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Saved reports</span>
-            <a class="link-secondary" href="#" aria-label="Add a new report">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Current month
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Last quarter
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Social engagement
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Year-end sale
-              </a>
+         <ul class="nav flex-column">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ELECTRÓNICA
+                </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li class="nav-item">
+                          <a class="nav-link" href="/php.html">
+                            <span data-feather="file"></span>
+                              MATENIMIENTO HARDWARE
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <span data-feather="shopping-cart"></span>
+                              DIAGRAMAS PARA INGENIERIAS
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                          <span data-feather="users"></span>
+                              REPORTES
+                          </a>
+                        </li>
+                    </ul>
             </li>
           </ul>
         </div>
@@ -120,36 +148,57 @@
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div
           class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h3 class="h3">OCUPACIÓN</h3>
+          <h3 class="h3">INICIO</h3>
         </div>
         <!-- Body html -->
 
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-1">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 shadow">
             <div class="h-60 p-2 text-bg-dark bg-dark rounded-3">
               <h4 style="color:white;">DESARROLLADOR WEB</h4>
-              <p style="color:white;">NIVEL JR LAPM JAVA BACKEND</p>
-              <button type="button" class="btn btn-success">DETALLES</button>
+              <table class="colorWeb">
+                <tr>
+                  <td style="color:white;">* LAPM</td>
+                  <td style="width:10px;"></td>
+                  <td>*JAVA IN ANDROID</td>
+                </tr>
+                <tr>
+                  <td>* BACKEND</td>
+                  <td style="width:10px;"></td>
+                  <td>* LARAVEL / CODEIGNITER</td>
+                </tr>
+                <tr>
+                  <td>* MODULAR - POO</td>
+                  <td style="width:10px;"></td>
+                  <td>* WEB-STACK</td>
+                </tr>
+              </table>
+              <br>
+              <button type="button" 
+                      class="btn btn-success">
+                DETALLES
+              </button>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-1">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2 shadow">
             <div class="h-60 p-2 text-bg-dark bg-dark rounded-3">
               <!-- TABLA -->
 
               <table class="table table-borderless" style="color:white;">
                 <tbody>
+                  
                   <tr>
                     <td style="width:10%">PHP</td>
                     <td style="width:40%">
                       <div class="progress">
                         <div class="progress-bar bg-success" 
                              role="progressbar" 
-                             style="width: 25%" 
-                             aria-valuenow="25"
+                             style="width: 80%" 
+                             aria-valuenow="80"
                              aria-valuemin="0" 
                              aria-valuemax="100">
-                                    25%
+                                    80%
                         </div>
                       </div>
                     </td>
@@ -158,11 +207,11 @@
                       <div class="progress">
                         <div class="progress-bar bg-success" 
                           role="progressbar" 
-                          style="width: 25%" 
-                          aria-valuenow="25"
+                          style="width: 70%" 
+                          aria-valuenow="70"
                           aria-valuemin="0" 
                           aria-valuemax="100">
-                          25%
+                          70%
                         </div>
                       </div>
                     </td>
@@ -174,11 +223,11 @@
                       <div class="progress">
                         <div class="progress-bar bg-success" 
                              role="progressbar" 
-                             style="width: 25%" 
-                             aria-valuenow="25"
+                             style="width: 70%" 
+                             aria-valuenow="80"
                              aria-valuemin="0" 
                              aria-valuemax="100">
-                                    25%
+                                    70%
                         </div>
                       </div>
                     </td>
@@ -187,33 +236,103 @@
                       <div class="progress">
                         <div class="progress-bar bg-success" 
                           role="progressbar" 
-                          style="width: 25%" 
-                          aria-valuenow="25"
+                          style="width: 50%" 
+                          aria-valuenow="50"
                           aria-valuemin="0" 
                           aria-valuemax="100">
-                          25%
+                          50%
                         </div>
                       </div>
                     </td>
                   </tr>
 
+                  <tr>
+                    <td style="width:10%">JS</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                             role="progressbar" 
+                             style="width: 50%" 
+                             aria-valuenow="50"
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                                    50%
+                        </div>
+                      </div>
+                    </td>
+                    <td style="width:10%">JQUERY</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                          role="progressbar" 
+                          style="width: 75%" 
+                          aria-valuenow="75"
+                          aria-valuemin="0" 
+                          aria-valuemax="100">
+                          75%
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                     <tr>
+                    <td style="width:10%">CSS</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                             role="progressbar" 
+                             style="width: 50%" 
+                             aria-valuenow="50"
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                                    50%
+                        </div>
+                      </div>
+                    </td>
+                    <td style="width:10%">BOOTSTRAP</td>
+                    <td style="width:40%">
+                      <div class="progress">
+                        <div class="progress-bar bg-success" 
+                          role="progressbar" 
+                          style="width: 50%" 
+                          aria-valuenow="50"
+                          aria-valuemin="0" 
+                          aria-valuemax="100">
+                          50%
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  
                 </tbody>
               </table>
-
-
               <!-- END TABLA -->
-
-
-
             </div>
           </div>
-
           <!-- Fin html -->
+        </div>  
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-2 shadow">
+            <div class="h-60 p-2 text-bg-dark bg-dark rounded-3">
+              A
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-2 shadow">
+            <div class="h-60 p-2 text-bg-dark bg-dark rounded-3">
+              B
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-2 shadow">
+            <div class="h-60 p-2 text-bg-dark bg-dark rounded-3">
+              C
+            </div>
+          </div>
+          
+        </div>
       </main> <!-- fin main -->
     </div> <!-- row -->
+    
   </div> <!--  contenedor -->
-
-
   <script src="./dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"

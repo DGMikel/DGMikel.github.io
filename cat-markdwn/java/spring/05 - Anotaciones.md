@@ -70,7 +70,57 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
       </ul>
     </td>
   </tr>
+  
+  <tr>
+    <td>
+      @RestController<br>(Spring - Stereotype Annotation)
+    </td>
+    <td>
+      <ul>
+        <li>Se usa a nivel de clase</li>
+        <li>
+          Cada uno de los metodos de la clase marcada con esta anotación devolvera un objeto de dominio en lugar de una vista.
+        </li>
+        <li>
+          Estos Objetos son del tipo HTTP y pueden ser por ejemplo JSON pero no HTMLs
+        </li>
+      </ul>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td>
+      @RequestMApping
+    </td>
+    <td>
+      <ul>
+        <li>Se usa a nivel de clase y de metodo</li>
+        <li>
+          Si se usa a nivel de clase establece una URL para todo el Controlador ejemplo:<br>
+          @RequestMApping(value = "autos") <-- 'prefijo autos' <br> 
+          navedaor = autos/beatle, autos/monza, autos/ibiza 
+        </li>
+        <li>
+          Cuando se usa en un metodo se ajusta una URL al metodo y mediante la petición se accede a el y a su respuesta.<br>
+          ejemplo: @RequestMApping(value = "beatle")<br> 
+          navedaor = autos/beatle <- para acceder a la pagina del carro beatle.
+        </li>
+      </ul>
+    </td>
+  </tr>
 </table>
+ 
+  
+  
+
+
+
+
+
+
+
+
 
 ## SEGUIR CON 
 importados de:

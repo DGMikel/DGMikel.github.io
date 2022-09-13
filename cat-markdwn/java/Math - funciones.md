@@ -1,5 +1,6 @@
 # Math()
-abs(x)	Returns the absolute value of x	double|float|int|long
+```java
+        abs(x)	Returns the absolute value of x	double / float / int /long
         acos(x)	Returns the arccosine of x, in radians	double
         asin(x)	Returns the arcsine of x, in radians	double
         atan(x)	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians	double
@@ -34,4 +35,5 @@ abs(x)	Returns the absolute value of x	double|float|int|long
         tanh(x)	Returns the hyperbolic tangent of a double value	double
         toDegrees(x)	Converts an angle measured in radians to an approx. equivalent angle measured in degrees	double
         toRadians(x)	Converts an angle measured in degrees to an approx. angle measured in radians	double
-        ulp(x)	Returns the size of the unit of least precision (ulp) of x	double|float
+        ulp(x)	Returns the size of the unit of least precision (ulp) of x	double / float
+        ```

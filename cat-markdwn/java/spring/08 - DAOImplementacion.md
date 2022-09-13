@@ -2,8 +2,18 @@
 
 El Objeto de Acceso a los datos o DAO es la clase por donde operan las entradas y salidas de información dado que esta clase es marcada con la anotación @Repository.
 
-así pues uan vez marcada esta clase se tienen que poner a su disposición varios elementos para que ejerza tal función .
+así pues uan vez marcada esta clase se tienen que poner a su disposición varios elementos para que ejerza tal función.
 
+Descripción:
+
+    1. JPA es importada desde el path javax.persistence
+    2. javax.transactional.Transactional  provee de anotaciones para la ejecución de Querys
+    3. EntityManager junto con @PersistenceContext  tienden el adamiaje para la ejecución de transacciones en la BD.
+    4. Anotaciones:
+        1. @Repository :: Marac la clse como DAO (Data Access Object) esta clas epuede acceder a la base de datos.
+        2. @Transactional :: Brinda los recursos para que se puedan hacer peticiones a la BD.
+        3. @PersistenceContext :: Expersa dependencia a un EntityMnager indica que el DAO depende del EntityManager
+        4. @Override :: Le dice al compilador de JAVA que el método que le prosigue sobreescribe al método de la clase padre.
 
 
 ```java
@@ -17,7 +27,6 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
 
-//  https://mvitinnovaciontecnologica.wordpress.com/2020/02/06/guia-de-anotaciones-de-spring-framework/
 ////////////////////////////////////////////////////////////////
 // Esta clase se usará como DAO ( DATA ACCESS OBJECT )        //
 // Por lo que los datos que entren y salgan hacia la clase    //

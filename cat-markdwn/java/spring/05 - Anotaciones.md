@@ -112,7 +112,8 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
   
   <tr>
     <td>
-      @Entity
+      @Entity<br>
+      (JAP)
     </td>
     <td>
       <ul>
@@ -124,7 +125,8 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
   
   <tr>
     <td>
-      @Table
+      @Table<br>
+      (JAP)
     </td>
     <td>
       <ul>
@@ -136,7 +138,8 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
   
    <tr>
     <td>
-      @Id
+      @Id<br>
+      (JAP)
     </td>
     <td>
       <ul>
@@ -148,7 +151,8 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
   
    <tr>
     <td>
-      @GeneratedValue
+      @GeneratedValue<br>
+      (JAP)
     </td>
     <td>
       <ul>
@@ -159,7 +163,8 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
   
   <tr>
     <td>
-      @Column
+      @Column<br>
+      (JAP)
     </td>
     <td>
       <ul>
@@ -172,7 +177,8 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
   
   <tr>
     <td>
-      @OneToMany
+      @OneToMany<br>
+      (JAP)
     </td>
     <td>
       <ul>
@@ -183,7 +189,8 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
   </tr>
   <tr>
     <td>
-      @mappedBy.
+      @mappedBy<br>
+      (JAP)
     </td>
     <td>
       <ul>

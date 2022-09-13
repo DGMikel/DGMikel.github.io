@@ -1,5 +1,11 @@
 # Implementacion de la interface DAO
 
+El Objeto de Acceso a los datos o DAO es la clase por donde operan las entradas y salidas de información dado que esta clase es marcada con la anotación @Repository.
+
+así pues uan vez marcada esta clase se tienen que poner a su disposición varios elementos para que ejerza tal función .
+
+
+
 ```java
 package com.nova.boros.controllers.dao;
 

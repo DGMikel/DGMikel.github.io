@@ -199,8 +199,87 @@ Dependeiendo de la necesidad Spring porovee de muchas anotaciones:
       </ul>
     </td>
   </tr>
+    <tr>
+    <td>
+      @Transaccionatl<br>
+      (JAP)
+    </td>
+    <td>
+      <ul>
+        <li><h3>EN COSNTRUCCION</h3></li>
+        <li></li>
+      </ul>
+    </td>
+  </tr>
   
 </table>
+
+
+
+
+CLASE
+@Entity: indica que la clase decorada es una entidad
+@MappedSuperClass: aplicado sobre una clase, indica que se mapeará como cualquier otra clase, pero que se aplicará únicamente a sus subclases, puesto que esta entidad no tiene una tabla asociada.
+@Table: especifica el nombre de la tabla relacionada con la entidad. Admite el parámetro:
+name: nombre de la tabla
+PROPIEDAD
+@Column: indica el nombre de la columna en base de datos. Admite el parámetro:
+name: especifica el nombre de la columna
+@Enumerated: indica que los valores de la propiedad van a estar dentro del rango de un objeto enumerador. Admite el parámetro:
+value: indica el tipo valor que se va a utilizar en la persistencia en Base de Datos. Puede utilizarse el enumerador EnumType.
+@Id: aplicado sobre una propiedad, indica que es la clave primaria de una entidad. La propiedad a la que hace referencia puede ser de los siguientes tipos: cualquier tipo primitivo, String, java.util.Date, java.sql.Date, java.math.BigDecimal, java.math.BigInteger
+@GeneratedValue: especifica la estrategia de generación de la clave primaria. Admite el parámetro:
+strategy: indica la estrategia a seguir para la obtención de un nuevo identificador. Permite utilizar el enum GenerationType.
+@Lob: aplicado sobre una propiedad, indica que es un objeto grande (Large OBject). Por ejemplo, en el caso de String, si no se especifica @Lob, se le asigna un tamaño máximo de 255 caracteres.
+@NotEmpty: validación de restricción, indica que la propiedad no puede tener un valor vacío.
+TIPOS DE RELACIÓN
+@OneToOne especifica un valor único que contiene una relación uno-a-uno con otro objeto. Dispone de los parámetros:
+cascade: indica el tipo de operación de cascada a realizar. Permite utilizar el enumerador CascadeType.
+fetch: indica la forma en que se consultarán las entidades asociadas. Permite utilizar el enumerador FetchType.
+@OneToMany: especifica una relación uno-a-muchos. Dispone de los parámetros:
+cascade: especifica el tipo de cascada. Permite utilizar el enumerador CascadeType.
+mappedBy: especifica la propiedad de la entidad hija (en el extremo muchos) que sirve para enlazar con la entidad principal (en el extremo uno)
+@ManyToOne: especifica una relación muchos-a-uno
+@ManyToMany especifica una relación muchos-a-muchos en la propiedad decorada. Si la relación es bidireccional, se debe especificar el extremo propietario (el que posee la clave principal) mediante el parámetro mappedBy. En casos de relación bidireccional, JPA creará una tabla relacional por cada sentido. Para evitar esto, se usa el decorador @JoinTable.
+@JoinTable especifica datos relativos a la tabla de unión en la relación. Este decorador se añade en el extremo propietario
+Parámetros disponibles
+name, indica el nombre de la tabla
+joinColumns, indica cómo se llamará la columna que contendrá la clave correspondiente a la tabla en el extremo que es propietario. Se utiliza el decorador @JoinColumn para ello.
+inverseJoinColumns, especifica cómo se llama la columna de clave ajena correspondiente al extremo propietario. Se utiliza el decorador @JoinColumns para ello.
+Decoradores disponibles
+@JoinColumn especifica la columna de unión. Dispone del parámetro
+name, indica el nombre de la columna.
+Ejemplo: imaginemos que en la entidad Receta tenemos la propiedad categorias, que correspondería a una unión muchos-a-muchos con la entidad Categoria, que a su vez tiene la propiedad recetas. En este caso, la propiedad categorias de Receta quedaría decorada de la siguiente forma:
+@ManyToMany
+@JoinTable(name = "receta_categoria",
+      joinColumns = @JoinColumn(name = "receta_id"),
+      inverseJoinColumns = @JoinColumn(name = "categoria_id"))
+private Set<Categoria> categorias;
+En la entidad Categoria, tendríamos una propiedad llamada recetas que decoraríamos de la siguiente forma:
+@ManyToMany(mappedBy = "categorias")
+private Set<Receta> recetas;
+ENUMERADORES UTILIZADOS
+CascadeType. Tipos de operación de cascada:
+REMOVE
+REFRESH
+PERSIST
+MERGE
+DETACH
+ALL
+GenerationType. Tipos de estrategia para la generación de identificadores:
+AUTO: el proveedor de persistencia escoge el método más adecuado según el modelo de base de datos
+IDENTITY: el proveedor de persistencia escoge un identificador basándose en una columna identity de la tabla
+SEQUENCE: utiliza una secuencia de la base de datos
+TABLE: utiliza una tabla auxiliar para asegurarse de que la clave es verdaderamente única
+FetchType. Tipos de obtención de entidades relacionadas:
+LAZY
+EAGER
+EnumType. Tipo de enumerador. Indica cómo va a ser el tipo de persistencia en la base de datos:
+ORDINAL: formato predeterminado. En base de datos, se almacenará el ordinal correspondiente al valor del enum.
+STRING: en base de datos, se almacenará el valor String correspondiente al enum. Usando este tipo de persistencia, se evitan errores en caso de que los valores del enum cambien o se intercalen valores nuevos, que puedan alterar el ordinal asignado.
+ 
+
+
 
 
 @OneToMany: Sirve para definir una relación uno-a-muchos entre Autor y Mensaje. La anotación cascade indica que las acciones de borrado, persist y merge se propagan en cascada a los mensajes. Más adelante explicaremos la anotación @mappedBy.

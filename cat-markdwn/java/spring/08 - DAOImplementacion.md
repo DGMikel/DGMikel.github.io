@@ -45,8 +45,9 @@ public class UsuariosDaoImp implements UsuariosDao{
     public List<Usuario> getUsuarios(){            //  está sobreescribiendo al método de la clase padre UsuarioDao
                                                    //  En este caso el método getUsuarios.
 
-        String query = "FROM Usuarios";            // String con Query de Hibernate
-
+        String query = "FROM Usuarios";            // String con Query de Hibernate - Hace referencia a la clase Usuarios
+                                                   // No a la tabla como la haria un SQL normal
+                                                   
         return entityManager.createQuery(query).   //El entityManager gestiona el query creado para hecar la
                 getResultList();                   // Consulta la BD y el resultado devolverlo en una Lista.
     }

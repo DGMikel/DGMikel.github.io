@@ -1,5 +1,6 @@
 # Datos
 
+```cmd
 css : lenguaje de estilos para paginas web
 css :: capa de estilos en cascada
 
@@ -46,3 +47,4 @@ elemento, elemento  : h1, h2, p { }   <h1>, <h2>, <p>
 // css inserción de código.
 css inserción archivo : se puede hacer uso de un archivo con los estilos que deba tener el documento
 css inserción archivo ejemplo : <link rel="stylesheet" href="./url_archivo.css">
+```
